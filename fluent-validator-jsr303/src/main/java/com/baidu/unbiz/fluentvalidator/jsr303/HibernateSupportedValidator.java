@@ -30,7 +30,7 @@ public class HibernateSupportedValidator<T> extends ValidatorHandler<T> implemen
     /**
      * hibernate默认的错误码
      */
-    private int hibernateDefaultErrorCode;
+    private String hibernateDefaultErrorCode;
 
     /**
      * {@link ConstraintViolation}到{@link ValidationError}的转换器
@@ -85,7 +85,7 @@ public class HibernateSupportedValidator<T> extends ValidatorHandler<T> implemen
         return this;
     }
 
-    public HibernateSupportedValidator<T> setHibernateDefaultErrorCode(int hibernateDefaultErrorCode) {
+    public HibernateSupportedValidator<T> setHibernateDefaultErrorCode(String hibernateDefaultErrorCode) {
         this.hibernateDefaultErrorCode = hibernateDefaultErrorCode;
         return this;
     }

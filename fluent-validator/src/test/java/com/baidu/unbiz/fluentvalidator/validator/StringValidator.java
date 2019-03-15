@@ -24,7 +24,7 @@ public class StringValidator extends ValidatorHandler<String> implements Validat
         }
         System.out.println("check " + t);
         if (!t.startsWith("abc")) {
-            context.addError(ValidationError.create("string should be abc").setErrorCode(100).setField("str")
+            context.addError(ValidationError.create("string should be abc").setErrorCode("100").setField("str")
                     .setInvalidValue(t));
             return false;
         }

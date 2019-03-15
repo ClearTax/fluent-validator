@@ -59,7 +59,7 @@ public class FluentValidatorStringTest {
         System.out.println(ret);
         System.out.println(ret.getTimeElapsed());
         assertThat(ret.isSuccess(), is(false));
-        assertThat(ret.getErrors().get(0).getErrorCode(), is(100));
+        assertThat(ret.getErrors().get(0).getErrorCode(), is("100"));
         assertThat(ret.getErrors().get(0).getErrorMsg(), is("string should be abc"));
         assertThat(ret.getErrors().get(0).getField(), is("str"));
         assertThat(ret.getErrors().get(0).getInvalidValue(), is((Object) str));
@@ -124,7 +124,7 @@ public class FluentValidatorStringTest {
         System.out.println(ret);
         assertThat(ret.hasNoError(), is(false));
         assertThat(ret.getErrors().size(), is(1));
-        assertThat(ret.getErrors().get(0).errorCode, is(100));
+        assertThat(ret.getErrors().get(0).errorCode, is("100"));
         assertThat(ret.getErrors().get(0).errorMsg, is("string should be abc"));
         assertThat(ret.getErrors().get(0).field, is("str"));
         assertThat(ret.getErrors().get(0).invalidValue, is((Object) str));
@@ -176,7 +176,7 @@ class MyError {
     /**
      * 错误码
      */
-    public int errorCode;
+    public String errorCode;
 
     /**
      * 错误值

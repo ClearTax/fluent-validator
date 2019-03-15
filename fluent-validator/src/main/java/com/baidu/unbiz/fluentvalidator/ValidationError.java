@@ -26,7 +26,7 @@ public class ValidationError {
     /**
      * 错误码
      */
-    private int errorCode;
+    private String errorCode;
 
     /**
      * 错误值
@@ -54,11 +54,11 @@ public class ValidationError {
         return new ValidationError().setErrorMsg(errorMsg);
     }
 
-    public int getErrorCode() {
+    public String getErrorCode() {
         return errorCode;
     }
 
-    public ValidationError setErrorCode(int errorCode) {
+    public ValidationError setErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
     }
